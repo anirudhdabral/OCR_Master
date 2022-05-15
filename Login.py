@@ -4,7 +4,7 @@ import mysql.connector as mysql
 from PyQt5.uic import loadUi
 import sys
 import gui.ocr
-from test import Main
+from Menu import Menu
 
 class Login(QFrame):
     def __init__(self):
@@ -37,7 +37,7 @@ class Login(QFrame):
         if self.uid == '' or self.upass == '':
             self.showDialog('Please enter your details')
         elif self.status > 0:
-            self.logon = Main()
+            self.logon = Menu()
             self.logon.show()
             self.close()
         else:
