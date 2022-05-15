@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Frame</class>
+ <widget class="QFrame" name="Frame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>911</width>
+    <height>436</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame {
+    
+	background-image: url(:/ocr/background.jpg);
+}
+QComboBox QAbstractItemView {
+    border: 2px solid darkgray;
+background:white;
+}
+QComboBox{
+background-color:white;
+border: none;
+border-radius: 4px;
+}
+QRadioButton
+{color:white;
+}
+QLabel
+{color:white;
+background:transparent;
+}
+
+QPushButton
+{background:white;
+color:black;
+border-radius:15px;
+}
+QPushButton:hover
+{color:#333;
+border-radius:15px;
+background:#49ebff;
+}
+QTextEdit
+{background:rgb(255, 255, 255);
+border-radius:5px;
+}
+QLineEdit
+{background:rgba(255, 255, 255, 50);
+border-radius:5px;
+border:none;
+color: white;
+border-bottom:1px solid #e2e2e2;
+}
+#table1
+{
+border-radius:5px;}</string>
+  </property>
+  <widget class="QTableWidget" name="table1">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>140</y>
+     <width>501</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:white;</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Content</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="btnShow">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>140</y>
+     <width>93</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Show</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmb">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>140</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="txtShow">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>200</y>
+     <width>281</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>40</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Notes📝</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="ocr.qrc"/>
+ </resources>
+ <connections/>
+</ui>

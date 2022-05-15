@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>698</width>
+    <height>588</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    
+	background-image: url(:/ocr/background.jpg);
+}
+QComboBox{
+background-color:white;
+border: none;
+border-radius: 4px;
+}
+QRadioButton
+{color:white;
+}
+QLabel
+{color:white;
+background:transparent;
+}
+
+QPushButton
+{background:white;
+color:black;
+border-radius:15px;
+}
+QPushButton:hover
+{color:#333;
+border-radius:15px;
+background:#49ebff;
+}
+QTextEdit
+{background:rgb(255, 255, 255);
+border-radius:5px;
+}
+QLineEdit
+{background:rgba(255, 255, 255, 50);
+border-radius:5px;
+border:none;
+color: white;
+border-bottom:1px solid #e2e2e2;
+}
+QGroupBox
+{color:white;
+}
+#btnClear:hover
+{background:rgb(255, 155, 121);
+}
+#btnSave:hover
+{background:rgb(107, 255, 169);
+}
+#txtId
+{background:transparent;
+border: none;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btnSubmit">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>110</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Run OCR</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSave">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>110</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Save to notes</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnClear">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>180</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Clear</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtPath">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>110</y>
+      <width>311</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="txtResults">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>250</y>
+      <width>601</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>180</y>
+      <width>31</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>ID:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtId">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>180</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>190</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Results:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>10</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>📄OCR: </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>40</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>(Optical Character Recognition)</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>698</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTranslate">
+    <property name="title">
+     <string>Translate</string>
+    </property>
+    <addaction name="actionTranslator"/>
+   </widget>
+   <widget class="QMenu" name="menuRecognizer">
+    <property name="title">
+     <string>Recognizer</string>
+    </property>
+    <addaction name="actionWord"/>
+    <addaction name="actionDigit"/>
+   </widget>
+   <widget class="QMenu" name="menuUsers">
+    <property name="title">
+     <string>Notes</string>
+    </property>
+    <addaction name="actionNotes"/>
+   </widget>
+   <widget class="QMenu" name="menuLogout">
+    <property name="title">
+     <string>Logout</string>
+    </property>
+    <addaction name="actionLogout"/>
+   </widget>
+   <addaction name="menuTranslate"/>
+   <addaction name="menuRecognizer"/>
+   <addaction name="menuUsers"/>
+   <addaction name="menuLogout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionTranslator">
+   <property name="text">
+    <string>Translator</string>
+   </property>
+  </action>
+  <action name="actionWord">
+   <property name="text">
+    <string>Word</string>
+   </property>
+  </action>
+  <action name="actionDigit">
+   <property name="text">
+    <string>Digit</string>
+   </property>
+  </action>
+  <action name="actionUsers">
+   <property name="text">
+    <string>Users</string>
+   </property>
+  </action>
+  <action name="actionLogs">
+   <property name="text">
+    <string>Logs</string>
+   </property>
+  </action>
+  <action name="actionLogout">
+   <property name="text">
+    <string>Logout</string>
+   </property>
+  </action>
+  <action name="actionNotes">
+   <property name="text">
+    <string>Notes</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="ocr.qrc"/>
+ </resources>
+ <connections/>
+</ui>

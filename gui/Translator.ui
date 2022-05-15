@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Frame</class>
+ <widget class="QFrame" name="Frame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>853</width>
+    <height>411</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame {
+    
+	background-image: url(:/ocr/background.jpg);
+}
+QComboBox QAbstractItemView {
+    border: 2px solid darkgray;
+background:white;
+}
+
+QComboBox{
+background:white;
+border: none;
+border-radius: 4px;
+}
+QRadioButton
+{color:white;
+}
+QLabel
+{color:white;
+background:transparent;
+}
+
+QPushButton
+{background:white;
+color:black;
+border-radius:15px;
+}
+QPushButton:hover
+{color:#333;
+border-radius:15px;
+background:#49ebff;
+}
+QTextEdit
+{background:rgb(255, 255, 255);
+border-radius:5px;
+}
+QLineEdit
+{background:rgba(255, 255, 255, 50);
+border-radius:5px;
+border:none;
+color: white;
+border-bottom:1px solid #e2e2e2;
+}
+QGroupBox
+{color:white;
+}
+#groupvBox
+{border: none;
+}</string>
+  </property>
+  <widget class="QPushButton" name="btnTranslate">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>120</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Translate</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>120</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <item>
+    <property name="text">
+     <string>Select Language</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>English</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Hindi</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>French</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>German</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Spanish</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QTextEdit" name="txtTranslate">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>180</y>
+     <width>361</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="txtSource">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>180</y>
+     <width>361</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>40</y>
+     <width>261</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>🪟 Translator</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>120</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Enter Source Text:</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="ocr.qrc"/>
+ </resources>
+ <connections/>
+</ui>
