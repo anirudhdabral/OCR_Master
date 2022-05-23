@@ -15,8 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow {
-    
-	background-image: url(:/ocr/background.jpg);
+background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 #4CA1AF, stop:1 #2C3E50);
 }
 QComboBox{
 background-color:white;
@@ -70,9 +69,9 @@ border: none;
    <widget class="QPushButton" name="btnSubmit">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>440</x>
       <y>110</y>
-      <width>111</width>
+      <width>91</width>
       <height>41</height>
      </rect>
     </property>
@@ -254,6 +253,29 @@ border: none;
     </property>
     <property name="text">
      <string>(Optical Character Recognition)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCam">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>110</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="ocr.qrc">
+      <normaloff>:/ocr/camera.png</normaloff>:/ocr/camera.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>25</width>
+      <height>25</height>
+     </size>
     </property>
    </widget>
   </widget>

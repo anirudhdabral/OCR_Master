@@ -15,8 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QFrame {
-    
-	background-image: url(:/ocr/background.jpg);
+	background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 #4CA1AF, stop:1 #2C3E50);
 }
 QComboBox{
 background-color:white;

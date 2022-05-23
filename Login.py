@@ -106,8 +106,9 @@ class Login(QFrame):
         self.txtskey.setText('')
 
     def about(self):
-        self.showDialog('This project is made by:-' \
-                        '\n1. Abhinav Sisodia\n' \
+        self.showDialog('Under the supervision of Assistant Professor Anika Bisht,\n' \
+                        'this project is made by:-\n' \
+                        '1. Abhinav Sisodia\n' \
                         '2. Anirudh Dabral\n' \
                         '3. Ariba Khan\n' \
                         '4. Devansh Gupta')

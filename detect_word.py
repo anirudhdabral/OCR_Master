@@ -105,8 +105,10 @@ class Detect_Word:
 
 		length=min(len(actual),len(result))
 		for i in range(length):
-			if actual[i] == result[i]:
+			if actual[i] == result[i] or (actual[i]=="I" and result[i]=="1") or (actual[i]=="E" and result[i]=="F"):
 				points += 1
+		if (actual[len(actual)-1] != result[-1])and(actual[-1] == result[-1]):
+			points += 1
 		accuracy = (points/length) *100
 
 		if accuracy<1:

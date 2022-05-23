@@ -50,7 +50,10 @@ class Word_pred(QFrame):
                     print(self.res,self.accuracy)
                     self.total_accuracy += float(self.accuracy)
                     count +=1
-            self.result = "Accuracy = " + "{:.2f}".format(self.total_accuracy/count) + "%"
+            try:
+                self.result = "Accuracy = " + "{:.2f}".format(self.total_accuracy/count) + "%"
+            except ZeroDivisionError:
+                pass
             self.txtResults.setText(str(self.result))
                     
     def showDialog(self,txt):

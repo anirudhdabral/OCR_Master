@@ -3,6 +3,7 @@ from PyQt5.QtCore import *
 from PyQt5.uic import loadUi
 import mysql.connector as mysql
 import sys
+import cv2
 import os
 from PIL import Image
 import pytesseract
@@ -31,6 +32,7 @@ class Menu(QMainWindow):
         self.btnSubmit.clicked.connect(self.submit)
         self.btnClear.clicked.connect(self.reset)
         self.btnSave.clicked.connect(self.save_note)
+        self.btnCam.clicked.connect(self.capture)
         self.actionTranslator.triggered.connect(lambda: self.loadFrame(self.actionTranslator))
         self.actionWord.triggered.connect(lambda: self.loadFrame(self.actionWord))
         self.actionDigit.triggered.connect(lambda: self.loadFrame(self.actionDigit))
@@ -79,6 +81,27 @@ class Menu(QMainWindow):
             self.txtResults.setText(target)
         except:
             self.showDialog('No file found')
+
+    def capture(self):
+        cam = cv2.VideoCapture(0)
+        while(True):
+            ret, frame = cam.read()
+            if not ret:
+                self.showDialog("Error connecting webcam!")
+                break
+            cv2.imshow("Press \"Space\" to capture document | \"Esc\" to exit",frame)
+            k = cv2.waitKey(1)
+            if k%256 == 27:
+                #escape
+                break
+            elif k%256 == 32:
+                img_name = "captured_image.png"
+                cv2.imwrite(img_name,frame)
+                btn = self.questionDialog('Confirmation', 'Image Captured\nDo you want to retake??')
+                if btn == QMessageBox.No:
+                    break
+        cam.release()
+        self.txtPath.setText(img_name)
     
     def getId(self):
         strsql = 'select max(note_id) ' \

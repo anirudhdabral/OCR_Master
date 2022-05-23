@@ -36,7 +36,8 @@ QLabel
 {color:white;
 }
 #Frame
-{background:#333;
+{
+background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 #0F2027, stop:1 #203A43);
 }
 QPushButton
 {background:white;

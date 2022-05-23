@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="ocr">
+    <file>camera.png</file>
     <file>background.jpg</file>
   </qresource>
 </RCC>
