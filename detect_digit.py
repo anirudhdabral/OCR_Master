@@ -1,7 +1,7 @@
 from threading import main_thread
 from numpy import argmax
-from keras.preprocessing.image import load_img
-from keras.preprocessing.image import img_to_array
+from tensorflow.keras.preprocessing.image import load_img
+from tensorflow.keras.preprocessing.image import img_to_array
 from keras.models import load_model
 from pip import main
  
